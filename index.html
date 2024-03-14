@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson12 pseudoclasses</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Сhoose your plan</th>
+        <!-- 
+          На практиці виглядало б ось так:
+          <th>
+            starter
+            <span>$10</span>
+            per month
+          </th> 
+          Але для тренування псевдокласів:
+        -->
+        <th>
+          <h2>starter</h2>
+          <p>$10</p>
+          <p>per month</p>
+        </th>
+        <th>
+          <h2>econom</h2>
+          <p>$30</p>
+          <p>per month</p>
+        </th>
+        <th>
+          <h2>standart</h2>
+          <p>$59</p>
+          <p>per month</p>
+        </th>
+        <th>
+          <h2>professional</h2>
+          <p>$99</p>
+          <p>per month</p>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 2 -->
+      <tr>
+        <th>Amount of space</th>
+        <td>20gb</td>
+        <td>40gb</td>
+        <td>110gb</td>
+        <td>unlimited</td>
+      </tr>
+      <!-- 3 -->
+      <tr>
+        <th>Bandwidth per month</th>
+        <td>120gb</td>
+        <td>240gb</td>
+        <td>610gb</td>
+        <td>1300gb</td>
+      </tr>
+      <!-- 4 -->
+      <tr>
+        <th>Email accounts</th>
+        <td>1</td>
+        <td>1$</td>
+        <td>60</td>
+        <td>unlimited</td>
+      </tr>
+      <!-- 5 -->
+      <tr>
+        <th>MySQL databases</th>
+        <td>1</td>
+        <td>1$</td>
+        <td>60</td>
+        <td>unlimited</td>
+      </tr>
+      <!-- 6 -->
+      <tr>
+        <th>25h support</th>
+        <td>No</td>
+        <td>Yes</td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+      <!-- 7 -->
+      <tr>
+        <th>Support tickets per month</th>
+        <td>2</td>
+        <td>6</td>
+        <td>14</td>
+        <td>20</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th><a href="#">start</a></th>
+        <th><a href="#">start</a></th>
+        <th><a href="#">start</a></th>
+        <th><a href="#">start</a></th>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>
+</table>

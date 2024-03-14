@@ -1,0 +1,136 @@
+/* Загальні */
+
+:root{
+  --color-text-head: white;
+  --color-text-standart: black;
+  --color-text-button: rgb(93, 93, 93);
+
+  --color-plan: rgb(121, 135, 172);
+  --color-starter: rgb(79, 98, 141);
+  --color-econom: rgb(47, 65, 115);
+  --color-standart: rgb(22, 41, 84);
+  --color-prof: rgb(7, 21, 58);
+
+  --color-dark-gray: rgb(219, 219, 219);
+  --color-gray: rgb(231, 231, 231);
+  --color-light-gray: rgb(243, 243, 243);
+
+  --border-radius: 10px;
+
+  font-family: sans-serif;
+  font-size: 16px;
+}
+table{
+  min-width: 700px;
+  width: 100%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  margin: auto;
+  text-align: center;
+}
+th,
+td{
+  padding: 1.3em;
+}
+h2,
+p{
+  margin-top: 0;        /* reset default */
+  margin-bottom: 0;     /* reset default */
+}
+h2{
+  font-size: inherit;   /* reset default */
+}
+a{
+  color: inherit;       /* У цьому випадку не обов'язково */
+  text-decoration: none;
+}
+
+/* thead */
+
+thead{
+  color:var(--color-text-head);
+  font-size: 1.3em;
+}
+thead tr th:first-child{
+  width: 25%;
+  border-top-left-radius: var(--border-radius);
+  background-color: var(--color-plan);
+}
+thead tr th:not(:first-child){
+  width: 18.75%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+thead h2{
+  margin-top: 1.25em;
+  margin-bottom: 2em;
+}
+thead th p:first-of-type{
+  margin-bottom: 0.15em;
+  font-size: 2.2em;
+}
+thead th p:last-of-type{
+  margin-bottom: 0.8em;
+}
+thead tr th:nth-child(2){
+  background-color: var(--color-starter);
+}
+thead tr th:nth-child(3){
+  background-color: var(--color-econom);
+}
+thead tr th:nth-child(4){
+  background-color: var(--color-standart);
+}
+thead tr th:last-child{
+  border-top-right-radius: var(--border-radius);
+  background-color: var(--color-prof);
+}
+
+/* Розфарбування комірок tbody, thead */
+
+tbody tr:nth-child(odd)>*:nth-child(odd),
+tfoot th:nth-child(odd){
+  background-color: var(--color-dark-gray);
+}
+tbody tr:nth-child(odd)>*:nth-child(even),
+tbody tr:nth-child(even)>*:nth-child(odd),
+tfoot th:nth-child(even){
+  background-color: var(--color-gray);
+}
+tbody tr:nth-child(even)>*:nth-child(even){
+  background-color: var(--color-light-gray);
+}
+
+/* tbody (+tfoot uppercase) */
+
+tbody th{
+  font-weight: normal;
+  text-align: left;
+}
+tbody td,
+tfoot tr th:not(first-child){
+  text-transform: uppercase;
+}
+tbody tr:nth-child(1) td:last-child,
+tbody tr:nth-child(3) td:last-child,
+tbody tr:nth-child(4) td:last-child{
+  text-transform: capitalize;
+}
+
+/* tfoot */
+
+tfoot tr th:first-child{
+  border-bottom-left-radius: var(--border-radius);
+}
+tfoot tr th:not(:first-child) a{
+  display: inline-block;
+  width: 75%;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  border: 1px solid var(--color-text-button);
+  color: var(--color-text-button);
+  background-color: var(--color-dark-gray);
+}
+tfoot tr th:last-child{
+  border-bottom-right-radius: var(--border-radius);
+}
